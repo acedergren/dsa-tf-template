@@ -1,2 +1,2 @@
 # dsa-tf-template
-Example DSA terraform provider
+Example DSA terraform provider for Akamai CDN Webperformance product Dynamic Site Accelerator
