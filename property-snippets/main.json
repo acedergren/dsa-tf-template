@@ -1,0 +1,67 @@
+{
+  "accountId": "act_1-5BYUG1",
+  "contractId": "ctr_1-5C13O2",
+  "groupId": "grp_99912",
+  "propertyId": "prp_663331",
+  "propertyVersion": 36,
+  "etag": "14b2d26fde7ab45af330df619dd6f4b782c93cdf",
+  "ruleFormat": "latest",
+  "rules": {
+    "name": "default",
+    "behaviors": [
+      {
+        "name": "origin",
+        "options": {
+          "cacheKeyHostname": "ORIGIN_HOSTNAME",
+          "compress": true,
+          "customCertificateAuthorities": [],
+          "customCertificates": [],
+          "customForwardHostHeader": "www.squawka.com",
+          "customValidCnValues": [
+            "{{Origin Hostname}}",
+            "{{Forward Host Header}}",
+            "freespins.se"
+          ],
+          "enableTrueClientIp": true,
+          "forwardHostHeader": "CUSTOM",
+          "hostname": "squawka.com.akamai-host.1826bf206013.squawka.com",
+          "httpPort": 80,
+          "httpsPort": 443,
+          "originCertificate": "",
+          "originCertsToHonor": "COMBO",
+          "originSni": true,
+          "originType": "CUSTOMER",
+          "ports": "",
+          "standardCertificateAuthorities": [
+            "akamai-permissive",
+            "THIRD_PARTY_AMAZON"
+          ],
+          "trueClientIpClientSetting": false,
+          "trueClientIpHeader": "True-Client-IP",
+          "verificationMode": "CUSTOM"
+        }
+      }
+    ],
+    "children": [
+      "#include:Origins.json",
+      "#include:Augment_insights.json",
+      "#include:Accelerate_Delivery.json",
+      "#include:Offload_origin.json",
+      "#include:Strengthen_security.json",
+      "#include:Increase_availability.json",
+      "#include:Minimize_payload.json",
+      "#include:Image_and_Video_Manager__Images_.json",
+      "#include:Image_and_Video_Manager__Videos_.json",
+      "#include:QS_fix.json"
+    ],
+    "comments": "The Default Rule template contains all the necessary and recommended features. Rules are evaluated from top to bottom and the last matching rule wins.",
+    "variables": [
+      {
+        "hidden": false,
+        "name": "PMUSER_NEWPATH",
+        "sensitive": false
+      }
+    ],
+    "options": {}
+  }
+}

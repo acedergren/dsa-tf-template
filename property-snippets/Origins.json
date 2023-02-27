@@ -1,0 +1,107 @@
+{
+  "children": [
+    {
+      "behaviors": [
+        {
+          "name": "origin",
+          "options": {
+            "cacheKeyHostname": "ORIGIN_HOSTNAME",
+            "compress": true,
+            "enableTrueClientIp": false,
+            "forwardHostHeader": "ORIGIN_HOSTNAME",
+            "hostname": "quantcast.mgr.consensu.org",
+            "httpPort": 80,
+            "httpsPort": 443,
+            "originCertificate": "",
+            "originSni": false,
+            "originType": "CUSTOMER",
+            "ports": "",
+            "verificationMode": "THIRD_PARTY"
+          }
+        },
+        {
+          "name": "cpCode",
+          "options": {
+            "value": {
+              "cpCodeLimits": null,
+              "createdDate": 1605195664000,
+              "description": "dsa.codekai.net",
+              "id": 1111742,
+              "name": "dsa.codekai.net",
+              "products": [
+                "Site_Accel"
+              ]
+            }
+          }
+        }
+      ],
+      "criteria": [
+        {
+          "name": "hostname",
+          "options": {
+            "matchOperator": "IS_ONE_OF",
+            "values": [
+              "dsa-acedergr-ads.akamaized.net"
+            ]
+          }
+        }
+      ],
+      "name": "Squawka Ads",
+      "options": {},
+      "criteriaMustSatisfy": "all"
+    },
+    {
+      "behaviors": [
+        {
+          "name": "origin",
+          "options": {
+            "cacheKeyHostname": "ORIGIN_HOSTNAME",
+            "compress": true,
+            "enableTrueClientIp": false,
+            "forwardHostHeader": "ORIGIN_HOSTNAME",
+            "hostname": "cdn.medal.tv",
+            "httpPort": 80,
+            "httpsPort": 443,
+            "originCertificate": "",
+            "originSni": false,
+            "originType": "CUSTOMER",
+            "ports": "",
+            "verificationMode": "THIRD_PARTY"
+          }
+        },
+        {
+          "name": "cpCode",
+          "options": {
+            "value": {
+              "cpCodeLimits": null,
+              "createdDate": 1605195664000,
+              "description": "dsa.codekai.net",
+              "id": 1111742,
+              "name": "dsa.codekai.net",
+              "products": [
+                "Site_Accel"
+              ]
+            }
+          }
+        }
+      ],
+      "criteria": [
+        {
+          "name": "hostname",
+          "options": {
+            "matchOperator": "IS_ONE_OF",
+            "values": [
+              "dsa-acedergr-imv.akamaized.net"
+            ]
+          }
+        }
+      ],
+      "name": "IMV",
+      "options": {},
+      "criteriaMustSatisfy": "all"
+    }
+  ],
+  "name": "Origins",
+  "options": {},
+  "criteriaMustSatisfy": "all"
+}
